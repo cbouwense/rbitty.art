@@ -12,14 +12,35 @@
       font-family: "Verdana", Times, Serif;
     }
 
-    p { 
+    .pictures {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      column-count: 3;
+      column-gap: 15px;
+      justify-items: center;
+      justify-content: center;
+    }
+
+    h1 { 
       font-size: 100px;
+      text-align: center;
+    }
+
+    img {
+      width: 400px;
+      height: 400px;
+      box-shadow: 2px 2px 10px #aaaaaa;
     }
   </style>
   
 </head>
 <body>
-  <p>Rachel Bitner Art</p>
+  <h1>Rachel Bitner Art</h1>
+  <div class="pictures">
+    <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/277790724_10222197511552001_8621723482740554466_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=tIO9RL1-OsYAX8omehu&_nc_ht=scontent-lga3-1.xx&oh=00_AT_sY0mggwJCoECLJuQpdJJffcPZuktfXXDlRodaaYaChg&oe=6322D160" />
+    <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/277749203_10222197511712005_6673550999044729108_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_ohc=LLY0gleNT-UAX8JzOnO&tn=h_XQrRYUdmNif85k&_nc_ht=scontent-lga3-1.xx&oh=00_AT8rOKrRtixcIqURkKtFNN3Ds1PRJmg7jt_s8brTeQJemg&oe=63226436" />
+    <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/302201962_10229027812824085_2530642939979861402_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=JghDlwGlwc4AX-4qXkd&_nc_ht=scontent-lga3-1.xx&oh=00_AT8ol3L10Jyu6SqsYzgxP-2z9QWBlVkovkdDVCmCEM1oMA&oe=63224E2D" />
+  </div>
 </body>
 </html>
 
