@@ -3,6 +3,10 @@
   font-family: "Verdana", Times, Serif;
 }
 
+body {
+  margin: 5%;
+}
+
 h1 { 
   font-size: 2rem;
   text-align: center;
@@ -11,11 +15,12 @@ h1 {
 img {
   width: 100%;
   height: 100%;
-  box-shadow: 2px 2px 10px #aaaaaa;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .pictures {
   display: grid;
-  row-gap: .5rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: .5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
