@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;700&display=swap');
 
 * {
   font-family: "Verdana", Times, Serif;
@@ -13,32 +14,53 @@ main {
 }
 
 nav {
-  background-color: white;
+  display: flex;
+  justify-content: center;
+  background-color: #dc7720;
   top: 0;
-  width: 100vw;
-  height: 60px;
+  height: 120px;
 }
 
 @keyframes fadeIn {
   from {
-    margin-top: 20%;
+    margin-top: 10%;
     opacity: 0;
   }
 
   to {
-    margin-top: 25%;
+    margin-top: 15%;
     opacity: 1;
   }
 }
 
-img {
-  margin-top: 25%;
+.art {
+  margin-top: 15%;
   width: 100%;
   height: 100%;
   border-radius: 2px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   animation: fadeIn 750ms cubic-bezier(0.55, 0.09, 0.68, 0.53);;
-  /* animation-fill-mode: backwards; */
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+
+  
+  background-color: white;
+  box-shadow: inset 0 0 20px 20px #eaeaee;
+  width: 100%;
+  height: 25%;
+  padding-top: 4rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+header {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .pictures {
