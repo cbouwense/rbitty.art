@@ -15,7 +15,7 @@ nav {
   justify-content: center;
   background-color: #dc7720;
   top: 0;
-  height: 120px;
+  height: 15vh;
   width: 100%;
 }
 
@@ -29,24 +29,23 @@ main {
 }
 
 .art {
-  animation: fadeIn 1500ms cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  animation: fadeIn 1500ms ease-in;
   border-radius: 2px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 /* iPad */
-@media (min-width: 820px) {
+@media (min-width: 800px) {
   nav {
-    height: 200px;
+    height: 20vh;
   }
-
+  
   main {
     width: 100%;
-    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    gap: .5rem;
+    gap: 1rem;
   }
 
   .art {
@@ -61,7 +60,7 @@ main {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-5px);
+    transform: translateY(-15px);
   }
 
   to {
