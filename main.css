@@ -1,36 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;700&display=swap');
 
-main {
-  padding-top: .5rem;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-}
-
-.art {
-  /* animation: fadeIn 1500ms cubic-bezier(0.55, 0.09, 0.68, 0.53); */
-  flex: 1;
-  border-radius: 2px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    /* transform: translateY(-5px); */
-  }
-
-  to {
-    opacity: 1;
-    /* transform: translateY(5px); */
-  }
-}
-
 * {
   font-family: "Verdana", Times, Serif;
 }
@@ -47,4 +16,58 @@ nav {
   background-color: #dc7720;
   top: 0;
   height: 120px;
+  width: 100%;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: 100vw;
+}
+
+.art {
+  /* animation: fadeIn 1500ms cubic-bezier(0.55, 0.09, 0.68, 0.53); */
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/* iPad */
+@media (min-width: 820px) {
+  nav {
+    height: 200px;
+  }
+
+  main {
+    padding-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5rem;
+  }
+
+  .art {
+    /* animation: fadeIn 1500ms cubic-bezier(0.55, 0.09, 0.68, 0.53); */
+    max-width: 40%;
+  }
+
+  .wide {
+    max-width: 75%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    /* transform: translateY(-5px); */
+  }
+
+  to {
+    opacity: 1;
+    /* transform: translateY(5px); */
+  }
+}
+
