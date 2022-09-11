@@ -1,29 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;700&display=swap');
 
-* {
-  font-family: "Verdana", Times, Serif;
-}
-
-body {
-  margin: 0;
-  background-color: #dc78206f;
-}
-
 main {
-  padding: 2rem;
-
-  display: grid;
+  padding-top: .5rem;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   gap: .5rem;
-  grid-template-columns: minmax(240px, 1fr) minmax(240px, 1fr) minmax(240px, 1fr);
-  grid-auto-rows: 240px;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  background-color: #dc7720;
-  top: 0;
-  height: 120px;
+.art {
+  /* animation: fadeIn 1500ms cubic-bezier(0.55, 0.09, 0.68, 0.53); */
+  flex: 1;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @keyframes fadeIn {
@@ -38,13 +31,20 @@ nav {
   }
 }
 
-.art {
-  width: 100%;
-  height: 100%;
-  border-radius: 2px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: fadeIn 1500ms cubic-bezier(0.55, 0.09, 0.68, 0.53);
+* {
+  font-family: "Verdana", Times, Serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #dc78206f;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #dc7720;
+  top: 0;
+  height: 120px;
 }
