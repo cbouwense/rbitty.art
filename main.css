@@ -30,8 +30,11 @@ main {
   gap: 1rem;
 }
 
-.art {
+.fadeIn {
   animation: fadeIn 1500ms ease-in;
+}
+
+.art {  
   border-radius: 2px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
