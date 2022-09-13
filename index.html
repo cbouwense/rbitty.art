@@ -15,16 +15,20 @@
         .visibility = "hidden";
     }
 
-    const showArt = () => {
-      document
-        .getElementById('art-gallery')
-        .style
-        .visibility = "visible";
-
+    const addFadeClassToArt = () => {
       const art = document.getElementsByClassName('art');
       for (let i = 0; i < art.length; i++) {
         art[i].classList.add('fadeIn');
       }
+    }
+
+    const showArt = () => {
+      addFadeClassToArt();
+
+      document
+        .getElementById('art-gallery')
+        .style
+        .visibility = "visible";
     }
     
     const loadPage = () => {

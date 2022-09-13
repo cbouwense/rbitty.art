@@ -17,6 +17,7 @@ nav {
   
   background-color: #dc7720;
 
+  /* position: sticky; */
   display: flex;
   justify-content: center;
 }
