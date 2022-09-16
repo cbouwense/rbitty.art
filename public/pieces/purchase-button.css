@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+
+/* From https://cssbuttons.app/buttons/19 */
+
+button {
+  font-family: 'Roboto Slab', serif;
+  width: 240px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    #dc7720,
+    #e85a19
+  );
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+button:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+button:focus {
+  outline: none;
+}
+
+Computers
+@media (min-width: 1024px) {
+  button {
+    width: 360px;
+    height: 82.5px;
+    font-size: 30px;
+  }
+}

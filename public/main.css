@@ -2,6 +2,7 @@
 
 * {
   font-family: "Verdana", Times, Serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -24,6 +25,7 @@ nav {
 
 main {
   width: 100vw;
+  height: 85vh;
   padding: 1rem 0;
 
   display: flex;
@@ -41,11 +43,7 @@ main {
 }
 
 /* iPad */
-@media (min-width: 768px) {
-  nav {
-    height: 20vh;
-  }
-  
+@media (min-width: 768px) { 
   main {
     width: 100%;
     flex-wrap: wrap;
@@ -63,6 +61,7 @@ main {
   }
 }
 
+/* Computers */
 @media (min-width: 1024px) {
   main {
     width: 100%;
