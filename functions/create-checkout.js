@@ -44,6 +44,10 @@ exports.handler = async (event) => {
 
   return {
     statusCode: 303,
+    headers: {
+      // 'access-control-allow-origin': 'rbitty.art',
+      'access-control-allow-origin': '*',
+    },
     body: JSON.stringify({
       sessionId: session.id,
       url: session.url,
