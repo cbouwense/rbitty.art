@@ -4,5 +4,19 @@ main {
 }
 
 #piece {
-  max-height: 75%;
+ max-width: 80%;
+}
+
+/* iPad */
+@media (min-width: 768px) {
+  #piece {
+    max-height: 75%;
+  }
+}
+
+/* Computers */
+@media (min-width: 1024px) {
+  #piece {
+    max-height: 75vh;
+  }
 }
