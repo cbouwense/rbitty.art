@@ -75,6 +75,7 @@ main {
   .art {
     max-height: 50vh;
   }
+  
   .wide {  
     max-width: 50%;
     object-fit: cover;

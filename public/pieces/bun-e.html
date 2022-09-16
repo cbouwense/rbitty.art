@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <title>Rachel Bitner Art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="../main.css" />
+  <link rel="stylesheet" href="piece.css" />
+  <script type="text/javascript">
+    const createCheckout = async () => {
+      const response = await fetch(`${window.location.origin}/.netlify/functions/create-checkout`);
+      const responseJson = await response.json();
+      console.log({ responseJson })
+      window.location = responseJson.url;
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <img src="../static/logo.svg">
+  </nav>
+  <main>
+    <img id="piece" class="art" src="../static/bun-e.jpeg" />
+    <section>
+      <h1>Purchase</h1>
+      <hr />
+      <button onclick="createCheckout()">Original: $50</button>
+      <button onclick="createCheckout()">Print: $10</button>
+    </section>
+  </main>
+</body>
+</html>
