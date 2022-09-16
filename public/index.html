@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="main.css" />
   <link rel="stylesheet" href="loading.css" />
   <script type="text/javascript">
+    const createCheckout = async () => {
+      const response = await fetch('http://localhost:8888/.netlify/functions/create-checkout');
+      const responseJson = await response.json();
+      console.log({ responseJson })
+      window.location = responseJson.url;
+    }
+
     const hideLoader = () => {
       document
         .getElementById('loading-screen')
@@ -52,7 +59,7 @@
   <main id="art-gallery">
     <img class="art" src="static/moon-in-sun.jpeg" />
     <img class="art" src="static/two-sides.jpeg" />
-    <img class="art wide" src="static/bun-e.jpeg" />
+    <img onclick="createCheckout()" class="art wide" src="static/bun-e.jpeg" />
     <img class="art" src="static/eye-plant.jpeg" />
     <img class="art" src="static/dots.jpeg" />
     <img class="art wide" src="static/mushrooms.jpeg" />
