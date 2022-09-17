@@ -56,11 +56,14 @@
   </div>
   <main 
     id="art-gallery"
-    x-data="{ skus: [] }"
+    x-data="{ 
+      skus: [],
+      wide: ['bun-e', 'mushrooms', 'orange-sun-purple-moon']
+    }"
     x-init="skus = await (await fetch(`${window.location.origin}/.netlify/functions/get-skus`)).json()"
   >
     <template x-for="sku in skus">
-      <img @click="goToDetailPage(sku)" x-bind:src="`static/${sku}.jpeg`" class="art" />
+      <img @click="goToDetailPage(sku)" x-bind:src="`static/${sku}.jpeg`" x-bind:class="wide ? 'art wide' : 'art'" />
     </template>
   </main>
 </body>
