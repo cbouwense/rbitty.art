@@ -1,24 +1,21 @@
 const products = require('./data/products.json');
-const stripe = require("stripe")("sk_test_51LiPLkGp6Qs26GN4dkzzfIFl4FRNfugJQHQTtTS7xrxadINN28hnaG6DxeMhBaVjR75nLJhwsNwNWZeWdcWYk0jJ00thXEKTLc");
+const stripe = require('stripe')('sk_test_51LiPLkGp6Qs26GN4dkzzfIFl4FRNfugJQHQTtTS7xrxadINN28hnaG6DxeMhBaVjR75nLJhwsNwNWZeWdcWYk0jJ00thXEKTLc');
 
 exports.handler = async (event) => {
-  const sku = 1;
-  const quantity = 1;
-  const product = {
-    "sku": "1",
-    "name": "Bun-E",
-    "description": "This is a painting of a rabbit.",
-    "image": "https://www.rbitty.art/static/bun-e.jpeg",
-    "amount": 3000,
-    "currency": "USD"
-  };
+  const tokens = event.path.split('/');
+  console.log({ tokens })
+  const sku = tokens.pop();
+  const isOriginal = tokens.pop() === 'original';
+  console.log({ sku, isOriginal })
+
+  const product = products.find(p => p.sku === sku);
 
   const session = await stripe.checkout.sessions.create({
-    mode: "payment",
+    mode: 'payment',
     payment_method_types: ['card'],
     billing_address_collection: 'auto',
     shipping_address_collection: {
-      allowed_countries: ['US', 'CA'],
+      allowed_countries: ['US'],
     },
     success_url: 'https://shrug.sh',
     cancel_url: 'https://shrug.sh:1738',
@@ -28,14 +25,18 @@ exports.handler = async (event) => {
           currency: product.currency,
           product_data: {
             name: product.name,
-            description: product.description,
+            description: 
+              isOriginal  
+                ? 'Original work'
+                : 'Print',
             images: [product.image],
           },
-          unit_amount: product.amount,
-          
+          unit_amount: 
+            isOriginal 
+              ? product.amountInCentsOriginal
+              : product.amountInCentsPrint,
         },
         quantity: 1,
-        
       },
     ],
   });
@@ -51,7 +52,7 @@ exports.handler = async (event) => {
     body: JSON.stringify({
       sessionId: session.id,
       url: session.url,
-      publishableKey: "pk_test_51LiPLkGp6Qs26GN4kp26Gv7dlX7boAEMV3MrUHHP5g9PHHXcbZeE2Ziujv7113sOWJwJ49eT8Axuw2bmzycMwMLk00OQOISTy9",
+      publishableKey: 'pk_test_51LiPLkGp6Qs26GN4kp26Gv7dlX7boAEMV3MrUHHP5g9PHHXcbZeE2Ziujv7113sOWJwJ49eT8Axuw2bmzycMwMLk00OQOISTy9',
     }),
   };
 };

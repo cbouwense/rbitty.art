@@ -8,27 +8,8 @@
   <link rel="stylesheet" href="../main.css" />
   <link rel="stylesheet" href="piece.css" />
   <link rel="stylesheet" href="purchase-button.css" />
+  <script type="text/javascript" src="../create-checkout.js"></script>
   <script type="text/javascript">
-    const createCheckout = async () => {
-      const response = await fetch(`${window.location.origin}/.netlify/functions/create-checkout`);
-      const responseJson = await response.json();
-      window.location = responseJson.url;
-    }
-
-    const getOriginalPrice = async (sku) => {
-      const response = await fetch(`${window.location.origin}/.netlify/functions/get-price/${sku}`);
-      const { amountInCentsOriginal } = await response.json();
-      const priceInDollars = Math.ceil(amountInCentsOriginal / 100);
-      document.getElementById('originalPrice').innerText = `$${priceInDollars}`;
-    }
-
-    const getPrintPrice = async (sku) => {
-      const response = await fetch(`${window.location.origin}/.netlify/functions/get-price/${sku}`);
-      const { amountInCentsPrint } = await response.json();
-      const priceInDollars = Math.ceil(amountInCentsPrint / 100);
-      document.getElementById('printPrice').innerText = `$${priceInDollars}`;
-    }
-
     getOriginalPrice(1);
     getPrintPrice(1);
   </script>
@@ -40,11 +21,11 @@
   <main id="piece-detail">
     <img id="piece" class="art" src="../static/bun-e.jpeg" />
     <div>
-      <button onclick="createCheckout()">
+      <button onclick="createCheckoutOriginal(1)">
         Original Work 
         <span id="originalPrice"></span>
       </button>
-      <button onclick="createCheckout()">
+      <button onclick="createCheckoutPrint(1)">
         Print
         <span id="printPrice"></span>
       </button>

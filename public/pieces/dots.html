@@ -8,12 +8,10 @@
   <link rel="stylesheet" href="../main.css" />
   <link rel="stylesheet" href="piece.css" />
   <link rel="stylesheet" href="purchase-button.css" />
+  <script type="text/javascript" src="../create-checkout.js"></script>
   <script type="text/javascript">
-    const createCheckout = async () => {
-      const response = await fetch(`${window.location.origin}/.netlify/functions/create-checkout`);
-      const responseJson = await response.json();
-      window.location = responseJson.url;
-    }
+    getOriginalPrice(2);
+    getPrintPrice(2);
   </script>
 </head>
 <body>
@@ -23,8 +21,14 @@
   <main id="piece-detail">
     <img id="piece" class="art" src="../static/dots.jpeg" />
     <div>
-      <button onclick="createCheckout()">Original Work $30</button>
-      <button onclick="createCheckout()">Print $10</button>
+      <button onclick="createCheckoutOriginal(2)">
+        Original Work 
+        <span id="originalPrice"></span>
+      </button>
+      <button onclick="createCheckoutPrint(2)">
+        Print
+        <span id="printPrice"></span>
+      </button>
     </div>
   </main>
 </body>
