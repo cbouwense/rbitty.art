@@ -8,44 +8,7 @@
   <link rel="stylesheet" href="main.css" />
   <link rel="stylesheet" href="loading.css" />
   <script src="//unpkg.com/alpinejs" defer></script>
-  <script type="text/javascript">
-    const goToDetailPage = (page) => {
-      window.location = `${window.location.href}pieces/${page}`;
-    }
-
-    const hideLoader = () => {
-      document
-        .getElementById('loading-screen')
-        .style
-        .visibility = "hidden";
-    }
-
-    const addFadeClassToArt = () => {
-      const art = document.getElementsByClassName('art');
-      for (let i = 0; i < art.length; i++) {
-        art[i].classList.add('fadeIn');
-      }
-    }
-
-    const showArt = () => {
-      addFadeClassToArt();
-
-      document
-        .getElementById('art-gallery')
-        .style
-        .visibility = "visible";
-    }
-    
-    const loadPage = () => {
-      setTimeout(() => {
-        hideLoader();
-        showArt();
-        console.log('done!');
-      }, 1);
-    }
-
-    loadPage();
-  </script>
+  <script src="index.js" defer></script>
 </head>
 <body>
   <nav>
