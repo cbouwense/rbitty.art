@@ -1,6 +1,6 @@
 [
   {
-    "sku": "1",
+    "sku": "bun-e",
     "name": "Bun-E",
     "image": "https://www.rbitty.art/static/bun-e.jpeg",
     "amountInCentsOriginal": 10000,
@@ -8,7 +8,7 @@
     "currency": "USD"
   },
   {
-    "sku": "2",
+    "sku": "dots",
     "name": "Dots",
     "image": "https://www.rbitty.art/static/dots.jpeg",
     "amountInCentsOriginal": 8000,
@@ -16,7 +16,7 @@
     "currency": "USD"
   },
   {
-    "sku": "3",
+    "sku": "el-classico",
     "name": "El Classico",
     "image": "https://www.rbitty.art/static/el-classico.jpeg",
     "amountInCentsOriginal": 10000,
@@ -24,7 +24,7 @@
     "currency": "USD"
   },
   {
-    "sku": "4",
+    "sku": "eye-plant",
     "name": "Eye Plant",
     "image": "https://www.rbitty.art/static/eye-plant.jpeg",
     "amountInCentsOriginal": 10000,
@@ -32,7 +32,7 @@
     "currency": "USD"
   },
   {
-    "sku": "5",
+    "sku": "eye",
     "name": "Eye",
     "image": "https://www.rbitty.art/static/eye.jpeg",
     "amountInCentsOriginal": 10000,
@@ -40,7 +40,7 @@
     "currency": "USD"
   },
   {
-    "sku": "6",
+    "sku": "high-contrast",
     "name": "High Contrast",
     "image": "https://www.rbitty.art/static/high-contrast.jpeg",
     "amountInCentsOriginal": 10000,
@@ -48,7 +48,7 @@
     "currency": "USD"
   },
   {
-    "sku": "7",
+    "sku": "maroon",
     "name": "Maroon",
     "image": "https://www.rbitty.art/static/maroon.jpeg",
     "amountInCentsOriginal": 10000,
@@ -56,7 +56,7 @@
     "currency": "USD"
   },
   {
-    "sku": "8",
+    "sku": "moon-in-sun",
     "name": "Moon in Sun",
     "image": "https://www.rbitty.art/static/moon-in-sun.jpeg",
     "amountInCentsOriginal": 10000,
@@ -64,7 +64,7 @@
     "currency": "USD"
   },
   {
-    "sku": "9",
+    "sku": "mushrooms",
     "name": "Mushroom",
     "image": "https://www.rbitty.art/static/mushrooms.jpeg",
     "amountInCentsOriginal": 10000,
@@ -72,7 +72,7 @@
     "currency": "USD"
   },
   {
-    "sku": "10",
+    "sku": "orange-sun-purple-moon",
     "name": "Orange Sun Purple Moon",
     "image": "https://www.rbitty.art/static/orange-sun-purple-moon.jpeg",
     "amountInCentsOriginal": 10000,

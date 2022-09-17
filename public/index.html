@@ -7,6 +7,7 @@
   <meta name="keywords" content="">
   <link rel="stylesheet" href="main.css" />
   <link rel="stylesheet" href="loading.css" />
+  <script src="//unpkg.com/alpinejs" defer></script>
   <script type="text/javascript">
     const goToDetailPage = (page) => {
       window.location = `${window.location.href}pieces/${page}`;
@@ -40,7 +41,7 @@
         hideLoader();
         showArt();
         console.log('done!');
-      }, 2000);
+      }, 1);
     }
 
     loadPage();
@@ -53,18 +54,14 @@
   <div id="loading-screen">
     <div class="lds-ripple"><div></div><div></div></div>
   </div>
-  <main id="art-gallery">
-    <img onclick="goToDetailPage('moon-in-sun')"            class="art"      src="static/moon-in-sun.jpeg" />
-    <img onclick="goToDetailPage('two-sides')"              class="art"      src="static/two-sides.jpeg" />
-    <img onclick="goToDetailPage('bun-e')"                  class="art wide" src="static/bun-e.jpeg" />
-    <img onclick="goToDetailPage('eye-plant')"              class="art"      src="static/eye-plant.jpeg" />
-    <img onclick="goToDetailPage('dots')"                   class="art"      src="static/dots.jpeg" />
-    <img onclick="goToDetailPage('mushrooms')"              class="art wide" src="static/mushrooms.jpeg" />
-    <img onclick="goToDetailPage('el-classico')"            class="art"      src="static/el-classico.jpeg" />
-    <img onclick="goToDetailPage('eye')"                    class="art"      src="static/eye.jpeg" />
-    <img onclick="goToDetailPage('orange-sun-purple-moon')" class="art wide" src="static/orange-sun-purple-moon.jpeg" />
-    <img onclick="goToDetailPage('high-contrast')"          class="art"      src="static/high-contrast.jpeg" />
-    <img onclick="goToDetailPage('maroon')"                 class="art"      src="static/maroon.jpeg" />
+  <main 
+    id="art-gallery"
+    x-data="{ skus: [] }"
+    x-init="skus = await (await fetch(`${window.location.origin}/.netlify/functions/get-skus`)).json()"
+  >
+    <template x-for="sku in skus">
+      <img @click="goToDetailPage(sku)" x-bind:src="`static/${sku}.jpeg`" class="art" />
+    </template>
   </main>
 </body>
 </html>
