@@ -8,26 +8,36 @@
   <link rel="stylesheet" href="../main.css" />
   <link rel="stylesheet" href="piece.css" />
   <link rel="stylesheet" href="purchase-button.css" />
-  <script defer type="text/javascript" src="../create-checkout.js"></script>
-  <script type="text/javascript">
-    getOriginalPrice(11);
-    getPrintPrice(11);
-  </script>
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <script type="text/javascript" src="../create-checkout.js"></script>
 </head>
 <body>
   <nav>
     <img src="../static/logo.svg">
   </nav>
-  <main id="piece-detail">
-    <img id="piece" class="art" src="../static/two-sides.jpeg" />
+  <main 
+    id="piece-detail"
+    x-data="{
+      sku: window.location.pathname.split('/').pop() 
+    }"
+  >
+    <img id="piece" class="art" x-bind:src="`../static/${sku}.jpeg`" />
     <div>
-      <button onclick="createCheckoutOriginal(11)">
+      <button
+        x-init="price = `$${await getOriginalPrice(sku)}`"
+        x-data="{ price: '' }" 
+        @click="createCheckoutOriginal(sku)"
+      >
         Original Work 
-        <span id="originalPrice"></span>
+        <span x-text="price"></span>
       </button>
-      <button onclick="createCheckoutPrint(11)">
+      <button
+        x-init="price = `$${await getPrintPrice(sku)}`"
+        x-data="{ price: '' }" 
+        @click="createCheckoutPrint(sku)"
+      >
         Print
-        <span id="printPrice"></span>
+        <span x-text="price"></span>
       </button>
     </div>
   </main>

@@ -11,72 +11,72 @@
     "sku": "dots",
     "name": "Dots",
     "image": "https://www.rbitty.art/static/dots.jpeg",
-    "amountInCentsOriginal": 8000,
-    "amountInCentsPrint": 800,
+    "amountInCentsOriginal": 10001,
+    "amountInCentsPrint": 1001,
     "currency": "USD"
   },
   {
     "sku": "el-classico",
     "name": "El Classico",
     "image": "https://www.rbitty.art/static/el-classico.jpeg",
-    "amountInCentsOriginal": 10000,
-    "amountInCentsPrint": 1000,
+    "amountInCentsOriginal": 10200,
+    "amountInCentsPrint": 1200,
     "currency": "USD"
   },
   {
     "sku": "eye-plant",
     "name": "Eye Plant",
     "image": "https://www.rbitty.art/static/eye-plant.jpeg",
-    "amountInCentsOriginal": 10000,
-    "amountInCentsPrint": 1000,
+    "amountInCentsOriginal": 10300,
+    "amountInCentsPrint": 1300,
     "currency": "USD"
   },
   {
     "sku": "eye",
     "name": "Eye",
     "image": "https://www.rbitty.art/static/eye.jpeg",
-    "amountInCentsOriginal": 10000,
-    "amountInCentsPrint": 1000,
+    "amountInCentsOriginal": 10400,
+    "amountInCentsPrint": 1400,
     "currency": "USD"
   },
   {
     "sku": "high-contrast",
     "name": "High Contrast",
     "image": "https://www.rbitty.art/static/high-contrast.jpeg",
-    "amountInCentsOriginal": 10000,
-    "amountInCentsPrint": 1000,
+    "amountInCentsOriginal": 10500,
+    "amountInCentsPrint": 1500,
     "currency": "USD"
   },
   {
     "sku": "maroon",
     "name": "Maroon",
     "image": "https://www.rbitty.art/static/maroon.jpeg",
-    "amountInCentsOriginal": 10000,
-    "amountInCentsPrint": 1000,
+    "amountInCentsOriginal": 10600,
+    "amountInCentsPrint": 1600,
     "currency": "USD"
   },
   {
     "sku": "moon-in-sun",
     "name": "Moon in Sun",
     "image": "https://www.rbitty.art/static/moon-in-sun.jpeg",
-    "amountInCentsOriginal": 10000,
-    "amountInCentsPrint": 1000,
+    "amountInCentsOriginal": 10700,
+    "amountInCentsPrint": 1700,
     "currency": "USD"
   },
   {
     "sku": "mushrooms",
     "name": "Mushroom",
     "image": "https://www.rbitty.art/static/mushrooms.jpeg",
-    "amountInCentsOriginal": 10000,
-    "amountInCentsPrint": 1000,
+    "amountInCentsOriginal": 10800,
+    "amountInCentsPrint": 1800,
     "currency": "USD"
   },
   {
     "sku": "orange-sun-purple-moon",
     "name": "Orange Sun Purple Moon",
     "image": "https://www.rbitty.art/static/orange-sun-purple-moon.jpeg",
-    "amountInCentsOriginal": 10000,
-    "amountInCentsPrint": 1000,
+    "amountInCentsOriginal": 10900,
+    "amountInCentsPrint": 1900,
     "currency": "USD"
   }
 ]

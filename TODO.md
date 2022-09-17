@@ -5,9 +5,6 @@
 - enter real product prices
 
 # Nice
-- defer js
-- refactor some stuff 
-  - make SKU the slug
 - favicon
 - only load once
 - test js

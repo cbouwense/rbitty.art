@@ -13,13 +13,11 @@ const createCheckoutPrint = async (sku) => {
 const getOriginalPrice = async (sku) => {
   const response = await fetch(`${window.location.origin}/.netlify/functions/get-price/${sku}`);
   const { amountInCentsOriginal } = await response.json();
-  const priceInDollars = Math.ceil(amountInCentsOriginal / 100);
-  document.getElementById('originalPrice').innerText = `$${priceInDollars}`;
+  return Math.ceil(amountInCentsOriginal / 100);
 }
 
 const getPrintPrice = async (sku) => {
   const response = await fetch(`${window.location.origin}/.netlify/functions/get-price/${sku}`);
   const { amountInCentsPrint } = await response.json();
-  const priceInDollars = Math.ceil(amountInCentsPrint / 100);
-  document.getElementById('printPrice').innerText = `$${priceInDollars}`;
+  return Math.ceil(amountInCentsPrint / 100);
 }
