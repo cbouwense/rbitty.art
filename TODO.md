@@ -1,4 +1,5 @@
 # Need
+- display correct prices on buttons
 - send correct payloads with buttons
 
 # Nice

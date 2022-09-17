@@ -14,6 +14,23 @@
       const responseJson = await response.json();
       window.location = responseJson.url;
     }
+
+    const getOriginalPrice = async (sku) => {
+      const response = await fetch(`${window.location.origin}/.netlify/functions/get-price/${sku}`);
+      const { amountInCentsOriginal } = await response.json();
+      const priceInDollars = Math.ceil(amountInCentsOriginal / 100);
+      document.getElementById('originalPrice').innerText = `$${priceInDollars}`;
+    }
+
+    const getPrintPrice = async (sku) => {
+      const response = await fetch(`${window.location.origin}/.netlify/functions/get-price/${sku}`);
+      const { amountInCentsPrint } = await response.json();
+      const priceInDollars = Math.ceil(amountInCentsPrint / 100);
+      document.getElementById('printPrice').innerText = `$${priceInDollars}`;
+    }
+
+    getOriginalPrice(1);
+    getPrintPrice(1);
   </script>
 </head>
 <body>
@@ -23,8 +40,14 @@
   <main id="piece-detail">
     <img id="piece" class="art" src="../static/bun-e.jpeg" />
     <div>
-      <button onclick="createCheckout()">Original Work $30</button>
-      <button onclick="createCheckout()">Print $10</button>
+      <button onclick="createCheckout()">
+        Original Work 
+        <span id="originalPrice"></span>
+      </button>
+      <button onclick="createCheckout()">
+        Print
+        <span id="printPrice"></span>
+      </button>
     </div>
   </main>
 </body>

@@ -3,21 +3,15 @@
     "sku": "1",
     "name": "Bun-E",
     "image": "https://www.rbitty.art/static/bun-e.jpeg",
-    "amount": 3000,
+    "amountInCentsOriginal": 20000,
+    "amountInCentsPrint": 100,
     "currency": "USD"
   },
   {
     "sku": "2",
-    "name": "Bun-E",
-    "image": "https://www.rbitty.art/static/bun-e.jpeg",
-    "amount": 3000,
-    "currency": "USD"
-  },
-  {
-    "sku": "3",
-    "name": "Bun-E",
-    "image": "https://www.rbitty.art/static/bun-e.jpeg",
-    "amount": 3000,
+    "name": "Dots",
+    "image": "https://www.rbitty.art/static/dots.jpeg",
+    "amountInCents": 3000,
     "currency": "USD"
   }
 ]
