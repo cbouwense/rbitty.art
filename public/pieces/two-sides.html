@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <title>Rachel Bitner Art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="../main.css" />
+  <link rel="stylesheet" href="piece.css" />
+  <link rel="stylesheet" href="purchase-button.css" />
+  <script type="text/javascript" src="../create-checkout.js"></script>
+  <script type="text/javascript">
+    getOriginalPrice(11);
+    getPrintPrice(11);
+  </script>
+</head>
+<body>
+  <nav>
+    <img src="../static/logo.svg">
+  </nav>
+  <main id="piece-detail">
+    <img id="piece" class="art" src="../static/two-sides.jpeg" />
+    <div>
+      <button onclick="createCheckoutOriginal(11)">
+        Original Work 
+        <span id="originalPrice"></span>
+      </button>
+      <button onclick="createCheckoutPrint(11)">
+        Print
+        <span id="printPrice"></span>
+      </button>
+    </div>
+  </main>
+</body>
+</html>
