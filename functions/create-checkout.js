@@ -41,8 +41,6 @@ exports.handler = async (event) => {
     ],
   });
 
-  console.log({ session })
-
   return {
     statusCode: 303,
     headers: {
