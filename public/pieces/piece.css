@@ -1,41 +1,49 @@
 #piece-detail {
+  width: 100%;
+  height: 85vh;
+
+  padding: 1rem 0;
+
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-evenly;
+  gap: 1rem;
 }
 
 #piece-detail > div {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
 }
 
 #piece {
-  max-width: 100%;
-  max-height: 80%;
+  max-width: 75%;
+  max-height: 75%;
+}
+
+/* Really small screens */
+@media (max-width: 375px) {
+  #piece-detail {
+    justify-content: space-evenly;
+  }
+
+  #piece-detail > div {
+    gap: 1rem;
+  }
 }
 
 /* iPad */
 @media (min-width: 768px) {
-  #piece {
-    max-width: 100%;
-    max-height: 100%;
+  #piece-detail {
+    justify-content: space-evenly;
   }
 }
 
 /* Computers */
 @media (min-width: 1024px) {
-  #piece-detail {
-    flex-direction: row;
-  }
-
-  #piece {
-    max-width: 65%;
-    max-height: 100%;
-  }
-
   #piece-detail > div {
     display: flex;
     flex-direction: column;

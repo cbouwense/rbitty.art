@@ -23,7 +23,7 @@ nav {
   justify-content: center;
 }
 
-main {
+#art-gallery {
   width: 100vw;
   height: 85vh;
   padding: 1rem 0;
@@ -44,7 +44,7 @@ main {
 
 /* iPad */
 @media (min-width: 768px) { 
-  main {
+  #art-gallery {
     width: 100%;
     flex-wrap: wrap;
     flex-direction: row;
@@ -63,7 +63,7 @@ main {
 
 /* Computers */
 @media (min-width: 1024px) {
-  main {
+  #art-gallery {
     width: 100%;
     flex-wrap: wrap;
     flex-direction: row;
