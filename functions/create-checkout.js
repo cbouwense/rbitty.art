@@ -3,10 +3,8 @@ const stripe = require('stripe')('sk_test_51LiPLkGp6Qs26GN4dkzzfIFl4FRNfugJQHQTt
 
 exports.handler = async (event) => {
   const tokens = event.path.split('/');
-  console.log({ tokens })
   const sku = tokens.pop();
   const isOriginal = tokens.pop() === 'original';
-  console.log({ sku, isOriginal })
 
   const product = products.find(p => p.sku === sku);
 
@@ -17,8 +15,8 @@ exports.handler = async (event) => {
     shipping_address_collection: {
       allowed_countries: ['US'],
     },
-    success_url: 'https://shrug.sh',
-    cancel_url: 'https://shrug.sh:1738',
+    success_url: `https://rbitty.art/success`,
+    cancel_url: `https://rbitty.art/failure`,
     line_items: [
       {
         price_data: {

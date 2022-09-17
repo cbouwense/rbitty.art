@@ -1,0 +1,21 @@
+main {
+  height: 85vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+h1 {
+  max-width: 85%;
+  margin-top: 100px;
+  font-family: 'Roboto Slab', serif;
+  text-shadow: 3px 3px 3px #dc7720;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+}

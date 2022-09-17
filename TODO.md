@@ -1,5 +1,4 @@
 # Need
-- create real success / failure pages
 - create env files
   - use stripe key
 - enter real product prices
