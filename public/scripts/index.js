@@ -26,11 +26,11 @@ const showArt = () => {
 }
 
 const loadPage = () => {
-  setTimeout(() => {
+  window.addEventListener('load', (e) => {
+    console.log('loaded!');
     hideLoader();
     showArt();
-    localStorage.setItem('loadedImages', 'true');
-  }, 1000);
+  });
 }
 
 loadPage();

@@ -28,7 +28,7 @@
     <template x-for="(sku, i) in skus">
       <img 
         @click="goToDetailPage(sku)"
-        x-bind:class="wide ? 'art wide' : 'art'"
+        x-bind:class="wide ? 'art wide hidden' : 'art hidden'"
         x-bind:src="`static/${sku}.jpeg`"
         x-bind:style="`--order: ${i};`"
       />

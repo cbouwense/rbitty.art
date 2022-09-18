@@ -10,6 +10,22 @@
   <link rel="stylesheet" href="../styles/purchase-button.css" />
   <script type="text/javascript" src="../scripts/create-checkout.js"></script>
   <script src="//unpkg.com/alpinejs" defer></script>
+  <script>
+    window.addEventListener('load', (e) => {
+      console.log('loaded')
+      const piece = 
+        document
+          .getElementById('piece')
+          .classList
+          .add('show');
+        setTimeout(() => {
+          const buttons = document.getElementsByClassName('hidden-button');
+          for(let i = 0; i < buttons.length; i++) {
+            buttons[i].classList.add('show-button');
+          }   
+        }, 400) 
+    });
+  </script>
 </head>
 <body>
   <nav>
@@ -17,13 +33,16 @@
   </nav>
   <main 
     id="piece-detail"
-    x-data="{
-      sku: window.location.pathname.split('/').pop() 
-    }"
+    x-data="{sku: window.location.pathname.split('/').pop()}"
   >
-    <img id="piece" class="art" x-bind:src="`../static/${sku}.jpeg`" />
+    <img
+      id="piece"
+      class="hidden"
+      x-bind:src="`../static/${sku}.jpeg`"
+    />
     <div>
       <button
+        class="hidden-button"
         x-init="price = `$${await getOriginalPrice(sku)}`"
         x-data="{ price: '' }" 
         @click="createCheckoutOriginal(sku)"
@@ -32,6 +51,7 @@
         <span x-text="price"></span>
       </button>
       <button
+        class="hidden-button"
         x-init="price = `$${await getPrintPrice(sku)}`"
         x-data="{ price: '' }" 
         @click="createCheckoutPrint(sku)"
