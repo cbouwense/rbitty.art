@@ -38,6 +38,18 @@ button:focus {
   outline: none;
 }
 
+.hidden-button {
+  opacity: 0;
+  filter: blur(5px);
+  transition-delay: calc(200ms * var(--order));
+}
+
+.show-button {
+  opacity: 1;
+  filter: blur(0);
+  transition: all 1s;
+}
+
 /* Small */
 @media (max-width: 375px) {
   button {
