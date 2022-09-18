@@ -1,5 +1,5 @@
 const products = require('./data/products.json');
-const stripe = require('stripe')('sk_test_51LiPLkGp6Qs26GN4dkzzfIFl4FRNfugJQHQTtTS7xrxadINN28hnaG6DxeMhBaVjR75nLJhwsNwNWZeWdcWYk0jJ00thXEKTLc');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event) => {
   const tokens = event.path.split('/');
