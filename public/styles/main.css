@@ -3,6 +3,12 @@
 * {
   font-family: "Roboto Slab", Times, Serif;
   box-sizing: border-box;
+  
+  --z-base: 100;
+  --z-art: 200;
+  --z-art-hover: 300;
+
+  z-index: var(--z-base);
 }
 
 body {
@@ -36,6 +42,7 @@ nav {
 .art {  
   border-radius: 2px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  z-index: var(--z-art);
 }
 
 .hidden {

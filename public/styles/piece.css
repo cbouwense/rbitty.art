@@ -28,6 +28,13 @@
 #piece {
   max-width: 75%;
   max-height: 75%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transform: translate(0);
+}
+
+#piece:hover {
+  z-index: var(--z-art-hover);
+  transform: scale(1.2);
 }
 
 /* Really small screens */
