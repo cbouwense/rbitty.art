@@ -11,6 +11,12 @@ const hideLoader = () => {
 
 const addShowClassToArt = () => {
   const art = document.getElementsByClassName('art');
+  if (art.length === 0) {
+    setTimeout(() => {
+      addShowClassToArt();
+    }, 100);
+    return;
+  }
   for (let i = 0; i < art.length; i++) {
     art[i].classList.add('show');
   }
@@ -25,12 +31,7 @@ const showArt = () => {
     .visibility = "visible";
 }
 
-const loadPage = () => {
-  window.addEventListener('load', (e) => {
-    console.log('loaded!');
-    hideLoader();
-    showArt();
-  });
-}
-
-loadPage();
+window.addEventListener('load', (e) => {
+  hideLoader();
+  showArt();
+});
