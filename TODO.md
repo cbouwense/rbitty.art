@@ -1,7 +1,4 @@
 # Need
-- create env files
-  - use stripe key
-- enter real product prices
 
 # Nice
 - favicon
