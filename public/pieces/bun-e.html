@@ -13,15 +13,13 @@
 </head>
 <body>
   <nav>
-    <img src="../static/logo.svg">
+    <img onclick="window.location = '/'" src="../static/logo.svg">
   </nav>
   <main 
     id="piece-detail"
-    x-data="{
-      sku: window.location.pathname.split('/').pop() 
-    }"
+    x-data="{sku: window.location.pathname.split('/').pop()}"
   >
-    <img id="piece" class="art" x-bind:src="`../static/${sku}.jpeg`" />
+    <img id="piece" x-bind:src="`../static/${sku}.jpeg`" />
     <div>
       <button
         x-init="price = `$${await getOriginalPrice(sku)}`"

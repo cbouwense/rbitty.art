@@ -9,15 +9,15 @@ const hideLoader = () => {
     .visibility = "hidden";
 }
 
-const addFadeClassToArt = () => {
+const addShowClassToArt = () => {
   const art = document.getElementsByClassName('art');
   for (let i = 0; i < art.length; i++) {
-    art[i].classList.add('fadeIn');
+    art[i].classList.add('show');
   }
 }
 
 const showArt = () => {
-  addFadeClassToArt();
+  addShowClassToArt();
 
   document
     .getElementById('art-gallery')
@@ -26,13 +26,11 @@ const showArt = () => {
 }
 
 const loadPage = () => {
-  const areImagesLoaded = Boolean(localStorage.getItem('loadedImages'));
-  const timeout = areImagesLoaded ? 1 : 2000;
   setTimeout(() => {
     hideLoader();
     showArt();
     localStorage.setItem('loadedImages', 'true');
-  }, timeout);
+  }, 1000);
 }
 
 loadPage();

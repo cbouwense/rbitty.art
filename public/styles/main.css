@@ -33,13 +33,20 @@ nav {
   gap: 1rem;
 }
 
-.fadeIn {
-  animation: fadeIn 1500ms ease-in;
-}
-
 .art {  
   border-radius: 2px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-10%);
+  transition-delay: calc(200ms * var(--order));
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1s;
 }
 
 /* iPad */
@@ -53,7 +60,8 @@ nav {
   }
 
   .art {
-    max-width: 40%;
+    max-height: 50vh;
+    transition-delay: calc(200ms * var(--order));
   }
 
   .wide {
@@ -73,6 +81,7 @@ nav {
 
   .art {
     max-height: 50vh;
+    transition-delay: calc(200ms * var(--order));
   }
   
   .wide {  
@@ -80,16 +89,3 @@ nav {
     object-fit: cover;
   }
 }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
