@@ -26,11 +26,13 @@ const showArt = () => {
 }
 
 const loadPage = () => {
+  const areImagesLoaded = Boolean(localStorage.getItem('loadedImages'));
+  const timeout = areImagesLoaded ? 1 : 2000;
   setTimeout(() => {
     hideLoader();
     showArt();
-    console.log('done!');
-  }, 2000);
+    localStorage.setItem('loadedImages', 'true');
+  }, timeout);
 }
 
 loadPage();

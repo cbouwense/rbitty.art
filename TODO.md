@@ -1,8 +1,10 @@
 # Need
+- dimensions / a little bit about the piece
+- logo back to home
 
 # Nice
 - favicon
-- only load once
+- enter real product prices
 - test js
 - test pages with testing-library
 - scroll animations
