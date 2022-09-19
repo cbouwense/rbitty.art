@@ -29,6 +29,10 @@ nav {
   justify-content: center;
 }
 
+nav > img {
+  cursor: pointer;
+}
+
 #art-gallery {
   width: 100vw;
   height: 85vh;
@@ -41,8 +45,9 @@ nav {
 
 .art {  
   border-radius: 2px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px #00000029, 0 3px 6px rgba(0,0,0,0.23);
   z-index: var(--z-art);
+  cursor: pointer;
 }
 
 .hidden {
