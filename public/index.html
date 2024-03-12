@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <title>Rachel Bitner Art</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
@@ -10,29 +11,27 @@
   <script src="./scripts/index.js" defer></script>
   <script src="//unpkg.com/alpinejs" defer></script>
 </head>
+
 <body>
   <nav>
     <img onclick="window.location = '/'" src="static/logo.svg">
   </nav>
   <div id="loading-screen">
-    <div class="lds-ripple"><div></div><div></div></div>
+    <div class="lds-ripple">
+      <div></div>
+      <div></div>
+    </div>
   </div>
-  <main 
-    id="art-gallery"
-    x-data="{ 
+  <main id="art-gallery" x-data="{ 
       skus: [],
       wide: ['bun-e', 'mushrooms', 'orange-sun-purple-moon']
     }"
-    x-init="skus = await (await fetch(`${window.location.origin}/.netlify/functions/get-skus`)).json()"
-  >
+    x-init="skus = await (await fetch(`${window.location.origin}/.netlify/functions/get-skus`)).json(); showGallery();">
     <template x-for="(sku, i) in skus">
-      <img 
-        @click="goToDetailPage(sku)"
-        x-bind:class="wide ? 'art wide hidden' : 'art hidden'"
-        x-bind:src="`static/${sku}.jpeg`"
-        x-bind:style="`--order: ${i};`"
-      />
+      <img @click="goToDetailPage(sku)" x-bind:class="wide ? 'art wide hidden' : 'art hidden'"
+        x-bind:src="`static/${sku}.jpeg`" x-bind:style="`--order: ${i};`" />
     </template>
   </main>
 </body>
+
 </html>
