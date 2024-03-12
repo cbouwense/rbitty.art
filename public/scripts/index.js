@@ -25,11 +25,7 @@ const showArt = () => {
   document.getElementById("art-gallery").style.visibility = "visible";
 };
 
-const showGallery = () => {
-  setTimeout(() => {
-    // window.addEventListener("load", (e) => {
-    hideLoader();
-    showArt();
-    // });
-  }, 2000);
-};
+setTimeout(() => {
+  hideLoader();
+  showArt();
+}, 3000);
