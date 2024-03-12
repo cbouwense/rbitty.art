@@ -25,7 +25,8 @@
   <main id="art-gallery" x-data="{ 
       skus: [],
       wide: ['bun-e', 'mushrooms', 'orange-sun-purple-moon']
-    }" x-init="skus = await (await fetch(`${window.location.origin}/.netlify/functions/get-skus`)).json(); ">
+    }"
+    x-init="skus = await (await fetch(`${window.location.origin}/.netlify/functions/get-skus`)).json(); waitForImagesToLoad(skus)">
     <template x-for="(sku, i) in skus">
       <img @click="goToDetailPage(sku)" x-bind:class="wide ? 'art wide hidden' : 'art hidden'"
         x-bind:src="`static/${sku}.jpeg`" x-bind:style="`--order: ${i};`" />

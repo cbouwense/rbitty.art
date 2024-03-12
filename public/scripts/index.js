@@ -25,7 +25,23 @@ const showArt = () => {
   document.getElementById("art-gallery").style.visibility = "visible";
 };
 
-setTimeout(() => {
-  hideLoader();
-  showArt();
-}, 3000);
+const waitForImagesToLoad = (skus) => {
+  const loadImages = skus.map((sku) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(sku);
+      img.onerror = () => reject(sku);
+      img.src = `https://rbitty.art/static/${sku}.jpeg`;
+    });
+  });
+
+  Promise.all(loadImages).then(() => {
+    hideLoader();
+    showArt();
+  });
+};
+
+// setTimeout(() => {
+//   hideLoader();
+//   showArt();
+// }, 3000);
